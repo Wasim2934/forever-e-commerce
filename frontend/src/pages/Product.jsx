@@ -2,7 +2,7 @@ import React from 'react'
 
 const Product = () => {
   return (
-    <div>
+    <div className='flex flex-col items-center'>
       
     </div>
   )
