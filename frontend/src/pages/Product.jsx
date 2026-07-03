@@ -1,9 +1,15 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const Product = () => {
+
+  const { productId } = useParams();  
+
+  const [value, setValue] = useState();
+
   return (
-    <div className='flex flex-col items-center'>
-      
+    <div>
+
     </div>
   )
 }
