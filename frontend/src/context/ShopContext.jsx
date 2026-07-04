@@ -10,6 +10,9 @@ const ShopContextProvider = ({children}) => {
 
   const [search, setSearch] = useState('');
   const [showSearch, setShowSearch] = useState(false);
+  const [cartItems, setCartItems] = useState({});
+
+  
 
   const value = {
     products,
