@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { shopContext } from '../context/ShopContext'
-import { assets, products } from '../assets/assets';
+import { assets } from '../assets/assets';
 import Title from '../components/Title'
 import ProductItem from '../components/ProductItem';
 
 const Collection = () => {
 
-  const { Products, search, showSearch } = useContext(shopContext);
+  const { products, search, showSearch } = useContext(shopContext);
 
   const [showFilter, setShowFilter] = useState(false);
   const [filterProducts, setFilterProducts] = useState([]);
@@ -33,7 +33,7 @@ const Collection = () => {
   }
 
   const applyFilters = () => {
-    let productsCopy = products.slice()
+    let productsCopy = [...products]
 
     if (showSearch && search) {
       productsCopy = productsCopy.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
@@ -70,8 +70,11 @@ const Collection = () => {
 
   useEffect(() => {
     applyFilters()
+  }, [category, subCategory, search, showSearch, products])
+
+  useEffect(() => {
     sortProducts()
-  }, [category, subCategory, sortType, search, showSearch])
+  }, [sortType])
 
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t border-gray-300'>
