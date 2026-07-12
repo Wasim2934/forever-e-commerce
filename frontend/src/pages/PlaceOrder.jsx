@@ -5,11 +5,10 @@ import { assets } from '../assets/assets'
 import { shopContext } from '../context/ShopContext'
 import axios from 'axios'
 import { toast } from 'react-toastify'
-import { currency } from '../../../admin/src/App'
 
 const PlaceOrder = () => {
 
-  const {navigate, backendUrl, token, cartItems, setCartItems, getCartAmount, delivery_fee, products} = useContext(shopContext);
+  const {currency, navigate, backendUrl, token, cartItems, setCartItems, getCartAmount, delivery_fee, products} = useContext(shopContext);
 
   const [method, setMethod] = useState('COD');
   const [formData, setFormData] = useState({
