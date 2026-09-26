@@ -15,6 +15,56 @@ A modern Full Stack MERN E-Commerce application built using **MongoDB, Express.j
 
 ---
 
+# 📸 Screenshots
+
+## Home Page
+
+![Home](./screenshots/home.png)
+
+---
+
+## Product Page
+
+![Products](./screenshots/products.png)
+
+---
+
+## Cart
+
+![Cart](./screenshots/cart.png)
+
+---
+
+## Checkout
+
+![Checkout](./screenshots/checkout.png)
+
+---
+
+## Orders
+
+![Orders](./screenshots/orders.png)
+
+---
+
+## Admin Dashboard
+
+![Admin_Dashboard](./screenshots/admin_dashboard.png)
+
+---
+
+## Product List
+
+![Product_List](./screenshots/product_list.png)
+
+---
+
+## Order Management
+
+![Order_List](./screenshots/order_management.png)
+
+---
+
 # ✨ Features
 
 ## 👤 Customer Features
@@ -165,56 +215,6 @@ Product images are uploaded using:
 - User Orders
 - All Orders
 - Update Order Status
-
----
-
-# 📸 Screenshots
-
-## Home Page
-
-![Home](./screenshots/home.png)
-
----
-
-## Product Page
-
-![Products](./screenshots/products.png)
-
----
-
-## Cart
-
-![Cart](./screenshots/cart.png)
-
----
-
-## Checkout
-
-![Checkout](./screenshots/checkout.png)
-
----
-
-## Orders
-
-![Orders](./screenshots/orders.png)
-
----
-
-## Admin Dashboard
-
-![Admin_Dashboard](./screenshots/admin_dashboard.png)
-
----
-
-## Product List
-
-![Product_List](./screenshots/product_list.png)
-
----
-
-## Order Management
-
-![Order_List](./screenshots/order_management.png)
 
 ---
 
