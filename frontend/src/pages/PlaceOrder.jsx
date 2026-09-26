@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Title from '../components/Title'
 import CartTotal from '../components/CartTotal'
 import { assets } from '../assets/assets'
@@ -9,6 +9,13 @@ import { toast } from 'react-toastify'
 const PlaceOrder = () => {
 
   const {currency, navigate, backendUrl, token, cartItems, setCartItems, getCartAmount, delivery_fee, products} = useContext(shopContext);
+
+  useEffect(() => {
+    if (!token) {
+      toast.error('Please login to place an order');
+      navigate('/login');
+    }
+  }, [token, navigate]);
 
   const [method, setMethod] = useState('COD');
   const [formData, setFormData] = useState({
@@ -58,6 +65,13 @@ const PlaceOrder = () => {
 
   const onSubmitHandler = async (e) => {
     e.preventDefault()
+
+    if (!token) {
+      toast.error('Please login to place an order');
+      navigate('/login');
+      return;
+    }
+
     try {
       let orderItems = []
 

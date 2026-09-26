@@ -98,4 +98,25 @@ const adminLogin = async (req, res) => {
   }
 };
 
-export { loginUser, registerUser, adminLogin };
+const getUserProfile = async (req, res) => {
+  try {
+    const user = await userModel.findById(req.userId).select("name email");
+
+    if (!user) {
+      return res.status(404).json({ success: false, message: "User not found" });
+    }
+
+    res.json({
+      success: true,
+      user: {
+        name: user.name,
+        email: user.email,
+      },
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ success: false, message: "Failed to fetch user profile" });
+  }
+};
+
+export { loginUser, registerUser, adminLogin, getUserProfile };
